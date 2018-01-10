@@ -1,3 +1,5 @@
 FROM nginx:1.13.3-alpine
-RUN echo "Hello World" > /usr/share/nginx/html/index.html
+ADD docker-entrypoint.sh /
+RUN chmod +x /docker-entrypoint.sh
 EXPOSE 80
+ENTRYPOINT ["/docker-entrypoint.sh"]

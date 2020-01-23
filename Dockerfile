@@ -1,4 +1,4 @@
-FROM nginx:1.13.3-alpine
+FROM nginx:1.17.8-alpine
 
 ADD docker-entrypoint.sh /
 
